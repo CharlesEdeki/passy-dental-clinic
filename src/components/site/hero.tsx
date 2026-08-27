@@ -6,8 +6,8 @@ import { ADDRESS_LINES, MAPS_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/clinic
 import { cn } from "@/lib/utils";
 
 const TRUST = [
-  { value: "12+", label: "Years in Isolo" },
-  { value: "8,000+", label: "Patients seen" },
+  { value: "2+", label: "Years in Isolo" },
+  { value: "1,000+", label: "Patients seen" },
   { value: "Mon–Sat", label: "8:30am – 8pm" },
   { value: "Sunday", label: "3pm – 7:30pm" },
 ];
