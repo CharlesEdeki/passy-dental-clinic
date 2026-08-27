@@ -6,7 +6,7 @@
 export const WHATSAPP_NUMBER = "2347067164269";
 export const PHONE_DISPLAY = "+234 706 716 4269";
 export const PHONE_HREF = "tel:+2347067164269";
-export const EMAIL = "hello@passydentalclinic.com";
+export const EMAIL = "passydentalclinic@gmail.com";
 /**
  * Google's canonical identifier for the clinic. Links built from this land on
  * Passy Dental Clinic itself — a plain "Jakande Gate" search resolves to the
