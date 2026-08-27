@@ -14,9 +14,9 @@ const DESCRIPTION =
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Before & After Gallery — Passy Dental Clinic" },
+      { title: "Before & After Gallery | Passy Dental Clinic" },
       { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: "Before & After Gallery — Passy Dental Clinic" },
+      { property: "og:title", content: "Before & After Gallery | Passy Dental Clinic" },
       { property: "og:description", content: DESCRIPTION },
     ],
     links: [{ rel: "canonical", href: "https://passydentalclinic.com/gallery" }],
@@ -70,7 +70,7 @@ function GalleryPage() {
               <span>
                 <b>Consent notice.</b> Clinical photographs are only published where the patient
                 has signed a release covering website use. Ask at reception if you&rsquo;d prefer
-                your treatment not be photographed — it changes nothing about your care.
+                your treatment not to be photographed. It changes nothing about your care.
               </span>
             </p>
           </Reveal>

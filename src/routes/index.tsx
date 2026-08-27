@@ -58,15 +58,16 @@ const STRUCTURED_DATA = {
     "Pediatric Care",
     "Emergency Services",
     "Sedation Dentistry",
+    "Geriatric Dentistry",
   ].map((name) => ({ "@type": "MedicalProcedure", name })),
 };
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Passy Dental Clinic — Modern Dentistry in Isolo, Lagos" },
+      { title: "Passy Dental Clinic | Modern Dentistry in Isolo, Lagos" },
       { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: "Passy Dental Clinic — Modern Dentistry in Isolo, Lagos" },
+      { property: "og:title", content: "Passy Dental Clinic | Modern Dentistry in Isolo, Lagos" },
       { property: "og:description", content: DESCRIPTION },
     ],
   }),

@@ -63,18 +63,18 @@ function describe(day: number, minutes: number): ClinicStatus {
   const open = minutes >= opens && minutes < closes;
 
   if (open) {
-    return { day, open, label: `Open now — closes ${formatMinutes(closes)}` };
+    return { day, open, label: `Open now - closes ${formatMinutes(closes)}` };
   }
 
   if (minutes < opens) {
-    return { day, open, label: `Closed — opens ${formatMinutes(opens)}` };
+    return { day, open, label: `Closed - opens ${formatMinutes(opens)}` };
   }
 
   // Already past today's window. The next one is tomorrow's, which may run
   // a different schedule -- this is what makes a Saturday-evening visitor
   // correctly see "opens 3pm" (Sunday's time) rather than a Monday time.
   const next = windowFor((day + 1) % 7);
-  return { day, open, label: `Closed — opens ${formatMinutes(next.opens)} tomorrow` };
+  return { day, open, label: `Closed- opens ${formatMinutes(next.opens)} tomorrow` };
 }
 
 /**

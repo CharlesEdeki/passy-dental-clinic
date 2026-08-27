@@ -1,6 +1,6 @@
 import { useLocation } from "@tanstack/react-router";
 
-import { EMAIL, MAPS_URL, PHONE_DISPLAY, PHONE_HREF, WHATSAPP_NUMBER } from "@/lib/clinic";
+import { EMAIL, MAPS_URL, PHONE_DISPLAY, PHONE_HREF, WHATSAPP_NUMBER, ADDRESS_LINES } from "@/lib/clinic";
 
 const CLINIC_LINKS = [
   { href: "#services", label: "Services" },
@@ -64,7 +64,7 @@ export function SiteFooter() {
               {EMAIL}
             </a>
             <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
-              Jakande Gate, Isolo, Lagos
+              {ADDRESS_LINES}
             </a>
           </nav>
         </div>

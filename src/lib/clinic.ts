@@ -25,8 +25,8 @@ export const MAP_EMBED_URL =
 /** Verified against the Maps listing; the previous values were ~750m out. */
 export const GEO = { latitude: 6.530052, longitude: 3.304714 };
 export const ADDRESS_LINES = [
-  "2nd Floor, Crystal Computer & Shopping Mall,",
-  "Jakande Gate Bus-stop, Isheri-Oshun Rd,",
+  "2nd Floor, Crystal Computer & Shopping Mall, ",
+  "Jakande Gate Bus-stop, Isheri-Oshun Rd, ",
   "Isolo, Lagos 102214, Nigeria.",
 ];
 

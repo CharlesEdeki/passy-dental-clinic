@@ -74,14 +74,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#123B32" },
-      { title: "Passy Dental Clinic — Modern Dentistry in Isolo, Lagos" },
+      { title: "Passy Dental Clinic | Modern Dentistry in Isolo, Lagos" },
       {
         name: "description",
         content:
           "Passy Dental Clinic at Jakande Gate, Isolo offers general dentistry, whitening, implants, orthodontics and pediatric care in a calm, modern setting.",
       },
       { name: "author", content: "Passy Dental Clinic" },
-      { property: "og:title", content: "Passy Dental Clinic — Modern Dentistry in Isolo, Lagos" },
+      { property: "og:title", content: "Passy Dental Clinic | Modern Dentistry in Isolo, Lagos" },
       {
         property: "og:description",
         content:
@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:url", content: "https://passydentalclinic.com/" },
       { property: "og:locale", content: "en_NG" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Passy Dental Clinic — Modern Dentistry in Isolo, Lagos" },
+      { name: "twitter:title", content: "Passy Dental Clinic | Modern Dentistry in Isolo, Lagos" },
       { name: "twitter:description", content: "Passy Dental Clinic at Jakande Gate, Isolo offers general dentistry, whitening, implants, orthodontics and pediatric care in a calm, modern setting." },
       { property: "og:image", content: "https://passydentalclinic.com/images/og-image.jpg" },
       { name: "twitter:image", content: "https://passydentalclinic.com/images/og-image.jpg" },
