@@ -108,33 +108,70 @@ export type Faq = { question: string; answer: string };
 
 export const FAQS: Faq[] = [
   {
-    question: "Do I need an appointment, or can I walk in?",
+    question: "Where is your dental clinic located?",
     answer:
-      "Walk-ins are welcome and we keep slots free for pain each day. Booking ahead simply means less waiting — send your details on WhatsApp and we'll confirm a time.",
+      "Passy Dental Clinic is located Oke afa jakande gate bus stop isolo lagos ( 2nd floor of Crystal Computer Shopping Mall) isheri oshun road isolo lagos.",
   },
   {
-    question: "Which HMOs do you accept?",
+    question: "How often should I do Scaling and Polishing?",
     answer:
-      "We currently work with Grooming Health HMO and Reliance HMO. Bring your enrolee ID and we'll verify your cover before any treatment starts, so nothing comes as a surprise.",
+      "Scaling and Polishing should be done every 6months ( twice in a year)",
   },
   {
-    question: "My child is terrified of the dentist. What happens?",
+    question: "Is Scaling and Polishing the same as Teeth whitening?",
     answer:
-      "Nothing they haven't agreed to. The first visit is usually just a look, a count of the teeth and a ride in the chair. We move at the child's pace and explain each step before it happens.",
+      "Absolutely NO! While Scaling and Polishing is scrapping tartar, calculus and debris from the teeth and gum. Teeth whitening on the other hand is simply bleaching the teeth to make it whiter",
   },
   {
-    question: "How much does a scaling and polishing cost?",
+    question: "Is it advisable to always brush with a Hard toothbrush?",
     answer:
-      "Prices depend on how much build-up there is, so we quote after looking. Ask on WhatsApp and we'll give you a realistic range before you travel.",
+      "No! The ideal and healthy toothbrush for brushing is the soft or medium bristtle toothbrush.",
   },
   {
-    question: "Do you treat emergencies outside opening hours?",
+    question: "When I have toothache or any dental issues should I resort to self medication or visit the Dentist?",
     answer:
-      "Call the clinic line first. For genuine emergencies we'll advise you immediately and, where needed, arrange to see you as early as possible the next working day.",
+      "Visit the dentist.",
   },
 ];
 
 /** Indexed by JS day number, Sunday first. */
+/**
+ * Shown as tags in the Visit section. These are genuine driving-distance
+ * claims (a patient really can get to Isolo from any of these), which is
+ * different in kind from the "beyond Lagos" tag rendered alongside them --
+ * that one is deliberately styled apart, since it's an invitation rather
+ * than a place name.
+ */
+export const NEARBY_AREAS = [
+  "Ejigbo",
+  "Okota",
+  "Ago Palace",
+  "Mushin",
+  "Apapa",
+  "Mile 2",
+  "Dopemu",
+  "Ikeja",
+  "Ogba",
+  "Ikorodu",
+  "Oke-Aro",
+  "Agbara",
+  "Victoria Island",
+  "Festac",
+  "Oshodi",
+  "Ajao Estate",
+  "Ikotun",
+  "Igando",
+  "Egbeda",
+  "Surulere",
+  "Yaba",
+  "Gbagada",
+  "Satellite Town",
+  "Amuwo Odofin",
+  "Lekki",
+  "Ikoyi",
+  "Ajah",
+];
+
 export const HOURS: ReadonlyArray<readonly [string, string]> = [
   ["Sunday", "3:00pm – 7:30pm"],
   ["Monday", "8:30am – 8:00pm"],

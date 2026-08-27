@@ -36,11 +36,15 @@ function PartnerTile({ partner }: { partner: HmoPartner }) {
   return (
     <li className="flex flex-col items-center gap-2">
       {content}
-      {comingSoon && (
-        <span className="font-mono text-[0.65rem] uppercase tracking-[0.13em] text-white/50">
-          Coming soon
-        </span>
-      )}
+      <span
+        className={
+          comingSoon
+            ? "font-mono text-[0.65rem] uppercase tracking-[0.13em] text-white/50"
+            : "font-mono text-[0.65rem] uppercase tracking-[0.13em] text-live"
+        }
+      >
+        {comingSoon ? "Coming soon" : "Active"}
+      </span>
     </li>
   );
 }
@@ -55,13 +59,15 @@ export function Hmo() {
           </span>
           <h2 className="text-[clamp(2rem,4vw,3.1rem)] text-white">Your HMO is welcome here.</h2>
           <p className="mt-5 max-w-[56ch] text-[1.05rem] text-white/70">
-            Bring your enrolee ID and we&rsquo;ll verify cover before treatment begins — no surprise
-            bills at the end of your visit. Not on a plan? We accept transfer, card and cash.
+            Bring in your enrolee ID and we&rsquo;ll verify cover before treatment begins, no
+            surprise bills at the end of your visit. Not on a plan? We accept transfer, card and
+            cash.
           </p>
+          <p className="mt-6 text-[0.95rem] font-semibold text-white">Our HMO partners are:</p>
         </Reveal>
 
         <Reveal delay={1}>
-          <ul className="mt-9 flex flex-wrap items-start gap-4">
+          <ul className="mt-6 flex flex-wrap items-start gap-4">
             {HMO_PARTNERS.map((partner) => (
               <PartnerTile key={partner.name} partner={partner} />
             ))}

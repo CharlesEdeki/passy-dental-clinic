@@ -49,7 +49,7 @@ export function Results() {
             <span>
               <b>Consent notice.</b> Clinical photographs are only published where the patient has
               signed a release covering website use. Ask at reception if you&rsquo;d prefer your
-              treatment not be photographed — it changes nothing about your care.
+              treatment not to be photographed. It changes nothing about your care.
             </span>
           </p>
         </Reveal>

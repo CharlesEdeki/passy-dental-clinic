@@ -64,7 +64,7 @@ export function SiteFooter() {
               {EMAIL}
             </a>
             <a href={MAPS_URL} target="_blank" rel="noopener noreferrer" className={linkClass}>
-              Jakande Gate, Isolo
+              Jakande Gate, Isolo, Lagos
             </a>
           </nav>
         </div>

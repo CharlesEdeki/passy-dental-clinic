@@ -97,14 +97,9 @@ export function Services() {
         <Reveal>
           <Eyebrow>What we do</Eyebrow>
           <h2 className="text-[clamp(2rem,4vw,3.1rem)]">
-            Everything your family&rsquo;s
-            <br />
-            teeth are likely to need.
+            We provide total and comprehensive oral care for you and the entire family.
           </h2>
-          <Lede>
-            Routine and specialist care under one roof, so you&rsquo;re not sent across Lagos for a
-            referral.
-          </Lede>
+          <Lede>Including routine and specialist care under one roof.</Lede>
         </Reveal>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

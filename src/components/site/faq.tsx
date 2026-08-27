@@ -15,7 +15,7 @@ export function Faq() {
       <div className="mx-auto max-w-[840px] px-6">
         <Reveal>
           <Eyebrow>Questions</Eyebrow>
-          <h2 className="text-[clamp(2rem,4vw,3.1rem)]">Before you come in.</h2>
+          <h2 className="text-[clamp(2rem,4vw,3.1rem)]">A few things worth knowing.</h2>
         </Reveal>
 
         <Reveal delay={1}>

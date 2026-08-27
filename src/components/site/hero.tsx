@@ -2,13 +2,14 @@ import { MapPin, Phone } from "lucide-react";
 
 import { ToothArch } from "@/components/site/tooth-arch";
 import { useClinicStatus } from "@/hooks/use-clinic-status";
-import { MAPS_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/clinic";
+import { ADDRESS_LINES, MAPS_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/clinic";
 import { cn } from "@/lib/utils";
 
 const TRUST = [
   { value: "12+", label: "Years in Isolo" },
   { value: "8,000+", label: "Patients seen" },
   { value: "Mon–Sat", label: "8:30am – 8pm" },
+  { value: "Sunday", label: "3pm – 7:30pm" },
 ];
 
 export function Hero() {
@@ -42,17 +43,22 @@ export function Hero() {
             <em className="italic text-theatre">dread the chair.</em>
           </h1>
 
-          <p className="mt-5 max-w-[56ch] text-[1.05rem] text-muted-foreground">
-            A calm, modern, serene clinic on the 2nd floor of Crystal Computer &amp; Shopping
-            Mall, Jakande Gate Bus-stop, along Isheri-Oshun Road, Isolo. General care, braces,
-            whitening and pediatric dentistry — with HMO enrolees welcome and same-day slots for
-            booking.
-          </p>
+          <div className="mt-5 max-w-[58ch] space-y-3 text-[1.05rem] text-muted-foreground">
+            <p>
+              A calm, modern, serene dental clinic environment situated on the 2nd floor of
+              Crystal Computer &amp; Shopping Mall, Jakande Gate, along Isheri-Oshun Road, Isolo,
+              Lagos.
+            </p>
+            <p>
+              Comprises General Dental Care, Orthodontics (braces), Aesthetic Dentistry (teeth
+              whitening), Geriatric Dentistry, Pediatric Dentistry, and more.
+            </p>
+            <p>HMO enrolees are also welcome. Instant bookings for dental appointments are not left out.</p>
+          </div>
 
-          {/* Phone and address get their own larger, scannable line — the
-              paragraph above carries the full address for context and SEO,
-              this is the "glance at it and go" version. */}
-          <div className="mt-6 flex flex-wrap items-center gap-x-7 gap-y-2.5">
+          {/* Phone stays a single scannable line; the full address gets its
+              own line below since it's too long to sit inline beside it. */}
+          <div className="mt-6 space-y-2.5">
             <a
               href={PHONE_HREF}
               className="flex items-center gap-2 text-[1.2rem] font-bold text-theatre underline-offset-4 transition-colors hover:text-theatre-deep hover:underline"
@@ -64,10 +70,10 @@ export function Hero() {
               href={MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[1.02rem] font-semibold text-foreground underline-offset-4 transition-colors hover:text-theatre hover:underline"
+              className="flex items-start gap-2 text-[0.98rem] font-semibold text-foreground underline-offset-4 transition-colors hover:text-theatre hover:underline"
             >
-              <MapPin className="size-[18px] text-coral" strokeWidth={2.2} aria-hidden="true" />
-              2nd Floor, Crystal Mall, Jakande Gate Bus-stop, Isolo
+              <MapPin className="mt-0.5 size-[18px] shrink-0 text-coral" strokeWidth={2.2} aria-hidden="true" />
+              {ADDRESS_LINES.join(" ")}
             </a>
           </div>
 

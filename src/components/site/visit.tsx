@@ -2,7 +2,7 @@ import { MapPin } from "lucide-react";
 
 import { Eyebrow, Lede, Reveal } from "@/components/site/primitives";
 import { useClinicStatus } from "@/hooks/use-clinic-status";
-import { HOURS, MAP_EMBED_URL, MAPS_URL, PHONE_DISPLAY, PHONE_HREF } from "@/lib/clinic";
+import { HOURS, MAP_EMBED_URL, MAPS_URL, NEARBY_AREAS, PHONE_DISPLAY, PHONE_HREF } from "@/lib/clinic";
 import { cn } from "@/lib/utils";
 
 export function Visit() {
@@ -13,10 +13,33 @@ export function Visit() {
       <div className="mx-auto grid max-w-[1180px] items-center gap-11 px-6 lg:grid-cols-2 lg:gap-14">
         <Reveal>
           <Eyebrow>Visit us</Eyebrow>
-          <h2 className="text-[clamp(2rem,4vw,3.1rem)]">Jakande Gate, Isolo.</h2>
+          <h2 className="text-[clamp(2rem,4vw,3.1rem)]">Jakande Gate, Isolo, Lagos.</h2>
           <Lede>
-            Easy to reach from Ejigbo, Okota, Ago Palace and Mushin. Parking available on site.
+            Easy to reach from all over Lagos, and well worth the trip from further afield.
+            Parking available on site.
           </Lede>
+
+          <div className="mt-5">
+            <p className="mb-2.5 text-[0.78rem] font-semibold uppercase tracking-[0.08em] text-muted-foreground">
+              Patients travel in from
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {NEARBY_AREAS.map((area) => (
+                <span
+                  key={area}
+                  className="rounded-full bg-mint px-3 py-1 text-[0.82rem] font-medium text-theatre-deep"
+                >
+                  {area}
+                </span>
+              ))}
+              {/* Deliberately styled apart from the named areas above -- this
+                  is an invitation ("you're welcome to travel in"), not a
+                  claim of coverage or presence the way a place name is. */}
+              <span className="rounded-full border border-dashed border-border px-3 py-1 text-[0.82rem] font-medium text-muted-foreground">
+                + beyond Lagos
+              </span>
+            </div>
+          </div>
 
           <ul className="mt-6.5">
             {HOURS.map(([day, hours], index) => (

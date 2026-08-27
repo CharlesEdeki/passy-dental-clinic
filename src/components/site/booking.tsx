@@ -30,6 +30,7 @@ const SERVICE_OPTIONS = [
 ];
 
 const PROMISES = [
+  "Highly professional team of staffs with modern equipped facility in a serene environment",
   "Same-day slots often available for booking",
   "Team replies 24/7, Monday to Sunday",
   "HMO enrolees verified before treatment",
@@ -119,7 +120,7 @@ export function Booking() {
           </h2>
           <Lede>
             Fill in your details and we&rsquo;ll confirm your slot on WhatsApp. Our team replies
-            during business hours, Monday to Saturday.
+            24/7, Monday to Sunday.
           </Lede>
           <ul className="mt-7 grid gap-3.5">
             {PROMISES.map((promise) => (
