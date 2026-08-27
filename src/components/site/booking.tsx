@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { SERVICES, whatsappLink } from "@/lib/clinic";
+import { whatsappLink } from "@/lib/clinic";
 import { cn } from "@/lib/utils";
 
 const HMO_OPTIONS = [
@@ -24,13 +24,27 @@ const HMO_OPTIONS = [
   { value: "Other", label: "Other — I'll bring my ID" },
 ];
 
+/**
+ * The clinic's actual treatment menu, distinct from the shorter overview on
+ * the homepage Services section -- this one drives what a patient can
+ * actually book, so it stays as detailed as the real service list.
+ */
 const SERVICE_OPTIONS = [
-  ...SERVICES.map((service) => service.title),
-  "Not sure — please advise",
+  // "Registration & Consultation",
+  "Scaling & Polishing",
+  "Teeth Whitening",
+  "Tooth Extraction",
+  "Tooth Filling (Temporary, GIC, Composite)",
+  "Dentures (Removable, Permanent)",
+  "Root Canal Treatment",
+  "Crowns (Anterior Jacket, PFM, Zirconia, E-max)",
+  "Bridges",
+  "Braces / Invisalign",
+  "Implants",
+  "Home Service",
 ];
 
 const PROMISES = [
-  "Highly professional team of staffs with modern equipped facility in a serene environment",
   "Same-day slots often available for booking",
   "Team replies 24/7, Monday to Sunday",
   "HMO enrolees verified before treatment",
@@ -53,6 +67,7 @@ export function Booking() {
     phone: "",
     service: "",
     date: "",
+    time: "",
     hmo: "none",
     notes: "",
   });
@@ -102,6 +117,7 @@ export function Booking() {
       `Service: ${form.service}`,
     ];
     if (form.date) lines.push(`Preferred date: ${form.date}`);
+    if (form.time) lines.push(`Preferred time: ${form.time}`);
     if (form.hmo !== "none") lines.push(`HMO: ${form.hmo}`);
     if (selected.length) lines.push(`Areas of concern: ${selected.join(", ")}`);
     if (form.notes.trim()) lines.push(`Notes: ${form.notes.trim()}`);
@@ -120,7 +136,7 @@ export function Booking() {
           </h2>
           <Lede>
             Fill in your details and we&rsquo;ll confirm your slot on WhatsApp. Our team replies
-            24/7, Monday to Sunday.
+            during business hours, Monday to Saturday.
           </Lede>
           <ul className="mt-7 grid gap-3.5">
             {PROMISES.map((promise) => (
@@ -183,10 +199,10 @@ export function Booking() {
               />
             </div>
 
-            <div className="mt-[18px] grid gap-[18px] sm:grid-cols-2">
+            <div className="mt-[18px]">
               <Field
                 id="f-service"
-                label="What do you need?"
+                label="Registration & Consultation"
                 required
                 error={errors.service}
                 control={
@@ -212,6 +228,9 @@ export function Booking() {
                   </Select>
                 }
               />
+            </div>
+
+            <div className="mt-[18px] grid gap-[18px] sm:grid-cols-2">
               <Field
                 id="f-date"
                 label="Preferred date"
@@ -226,6 +245,20 @@ export function Booking() {
                     data-invalid={Boolean(errors.date)}
                     onChange={(event) => update("date", event.target.value)}
                     className={cn(fieldClass, "h-auto", errors.date && "border-coral")}
+                  />
+                }
+              />
+              <Field
+                id="f-time"
+                label="Preferred time"
+                control={
+                  <Input
+                    id="f-time"
+                    name="time"
+                    type="time"
+                    value={form.time}
+                    onChange={(event) => update("time", event.target.value)}
+                    className={cn(fieldClass, "h-auto")}
                   />
                 }
               />
